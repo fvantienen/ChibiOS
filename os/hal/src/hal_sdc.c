@@ -323,6 +323,7 @@ static bool sdc_detect_bus_clk(SDCDriver *sdcp, sdcbusclk_t *clk) {
 
   /* Safe default.*/
   *clk = SDC_CLK_25MHz;
+  return HAL_SUCCESS; // For now bypass 50MHz mode
 
   /* Looks like only "high capacity" cards produce meaningful results during
      this clock detection procedure.*/
